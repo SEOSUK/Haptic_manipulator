@@ -50,37 +50,6 @@ include_directories(
   ${catkin_INCLUDE_DIRS}
 )
 
-add_executable(open_manipulator_teleop_keyboard src/open_manipulator_teleop_keyboard.cpp)
-add_dependencies(open_manipulator_teleop_keyboard ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-target_link_libraries(open_manipulator_teleop_keyboard ${catkin_LIBRARIES} )
-
-add_executable(open_manipulator_teleop_joystick src/open_manipulator_teleop_joystick.cpp)
-add_dependencies(open_manipulator_teleop_joystick ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-target_link_libraries(open_manipulator_teleop_joystick ${catkin_LIBRARIES} )
-
-add_executable(try src/try.cpp)
-add_dependencies(try ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-target_link_libraries(try ${catkin_LIBRARIES} )
-
-add_executable(try2 src/try2.cpp)
-add_dependencies(try2 ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-target_link_libraries(try2 ${catkin_LIBRARIES} )
-
-add_executable(servoCtrl src/servoCtrl.cpp)
-add_dependencies(servoCtrl ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-target_link_libraries(servoCtrl ${catkin_LIBRARIES} )
-
-add_executable(ManipulatorCtrl src/ManipulatorCtrl.cpp)
-add_dependencies(ManipulatorCtrl ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-target_link_libraries(ManipulatorCtrl ${catkin_LIBRARIES} )
-
-add_executable(haptic src/haptic.cpp)
-add_dependencies(haptic ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-target_link_libraries(haptic ${catkin_LIBRARIES} )
-
-add_executable(KillManipulatorCtrl src/KillManipulatorCtrl.cpp)
-add_dependencies(KillManipulatorCtrl ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-target_link_libraries(KillManipulatorCtrl ${catkin_LIBRARIES} )
 
 add_executable(force src/force.cpp)
 add_dependencies(force ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
@@ -89,14 +58,6 @@ target_link_libraries(force ${catkin_LIBRARIES} )
 add_executable(try_s src/try_s.cpp)
 add_dependencies(try_s ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 target_link_libraries(try_s ${catkin_LIBRARIES} )
-
-add_executable(try_IK src/try_IK.cpp)
-add_dependencies(try_IK ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-target_link_libraries(try_IK ${catkin_LIBRARIES} )
-
-#add_executable(try23 src/try23.cpp)
-#add_dependencies(try23 ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-#target_link_libraries(try23 ${catkin_LIBRARIES} )
 
 ################################################################################
 # Install
