@@ -1,0 +1,61 @@
+﻿<launch>
+  <arg name="usb_port"    			default="/dev/ttyUSB0"/>
+  <arg name="baud_rate"    			default="1000000"/>
+  <arg name="control_period"         		default="0.010"/>
+  <arg name="use_platform"           		default="true"/>
+
+  <arg name="dxl_id_11_position_p_gain" 	default="800"/>
+  <arg name="dxl_id_11_position_i_gain" 	default="0"/>
+  <arg name="dxl_id_11_position_d_gain" 	default="0"/>
+  <arg name="dxl_id_11_feedforward_1st_gain" 	default="0"/>
+  <arg name="dxl_id_11_feedforward_2nd_gain" 	default="0"/>
+
+  <arg name="dxl_id_12_position_p_gain" 	default="800"/>
+  <arg name="dxl_id_12_position_i_gain" 	default="0"/>
+  <arg name="dxl_id_12_position_d_gain" 	default="0"/>
+  <arg name="dxl_id_12_feedforward_1st_gain" 	default="0"/>
+  <arg name="dxl_id_12_feedforward_2nd_gain" 	default="0"/>
+
+  <arg name="dxl_id_13_position_p_gain" 	default="800"/>
+  <arg name="dxl_id_13_position_i_gain"	 	default="0"/>
+  <arg name="dxl_id_13_position_d_gain" 	default="0"/>
+  <arg name="dxl_id_13_feedforward_1st_gain" 	default="0"/>
+  <arg name="dxl_id_13_feedforward_2nd_gain" 	default="0"/>
+
+  <arg name="dxl_id_14_position_p_gain" 	default="800"/>
+  <arg name="dxl_id_14_position_i_gain" 	default="0"/>
+  <arg name="dxl_id_14_position_d_gain" 	default="0"/>
+  <arg name="dxl_id_14_feedforward_1st_gain" 	default="0"/>
+  <arg name="dxl_id_14_feedforward_2nd_gain" 	default="0"/>
+
+  <node name="open_manipulator_controller" pkg="open_manipulator_controller" type="open_manipulator_controller" 
+    output="screen" args="$(arg usb_port) $(arg baud_rate)">
+    <param name="control_period"       		       value="$(arg control_period)"/>
+    <param name="using_platform"       		       value="$(arg use_platform)"/>
+
+    <param name="dxl_id_11_position_p_gain"            value="$(arg dxl_id_11_position_p_gain)"/>
+    <param name="dxl_id_11_position_i_gain"            value="$(arg dxl_id_11_position_i_gain)"/>
+    <param name="dxl_id_11_position_d_gain"            value="$(arg dxl_id_11_position_d_gain)"/>
+    <param name="dxl_id_11_feedforward_1st_gain"       value="$(arg dxl_id_11_feedforward_1st_gain)"/>
+    <param name="dxl_id_11_feedforward_2nd_gain"       value="$(arg dxl_id_11_feedforward_2nd_gain)"/>
+
+    <param name="dxl_id_12_position_p_gain"            value="$(arg dxl_id_12_position_p_gain)"/>
+    <param name="dxl_id_12_position_i_gain"            value="$(arg dxl_id_12_position_i_gain)"/>
+    <param name="dxl_id_12_position_d_gain"            value="$(arg dxl_id_12_position_d_gain)"/>
+    <param name="dxl_id_12_feedforward_1st_gain"       value="$(arg dxl_id_12_feedforward_1st_gain)"/>
+    <param name="dxl_id_12_feedforward_2nd_gain"       value="$(arg dxl_id_12_feedforward_2nd_gain)"/>
+
+    <param name="dxl_id_13_position_p_gain"            value="$(arg dxl_id_13_position_p_gain)"/>
+    <param name="dxl_id_13_position_i_gain"            value="$(arg dxl_id_13_position_i_gain)"/>
+    <param name="dxl_id_13_position_d_gain"            value="$(arg dxl_id_13_position_d_gain)"/>
+    <param name="dxl_id_13_feedforward_1st_gain"       value="$(arg dxl_id_13_feedforward_1st_gain)"/>
+    <param name="dxl_id_13_feedforward_2nd_gain"       value="$(arg dxl_id_13_feedforward_2nd_gain)"/>
+
+    <param name="dxl_id_14_position_p_gain"            value="$(arg dxl_id_14_position_p_gain)"/>
+    <param name="dxl_id_14_position_i_gain"            value="$(arg dxl_id_14_position_i_gain)"/>
+    <param name="dxl_id_14_position_d_gain"            value="$(arg dxl_id_14_position_d_gain)"/>
+    <param name="dxl_id_14_feedforward_1st_gain"       value="$(arg dxl_id_14_feedforward_1st_gain)"/>
+    <param name="dxl_id_14_feedforward_2nd_gain"       value="$(arg dxl_id_14_feedforward_2nd_gain)"/>
+
+  </node>
+</launch>
