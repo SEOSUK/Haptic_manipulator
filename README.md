@@ -22,8 +22,21 @@ Joystick: 3d systems 사의 touch 패키지 및 하드웨어
 ### code brief
 
 open_manipulator/open_manipulator_teleop/src/force.cpp
-: 중력 매트릭스, 서보 전류엔코더 정보를 바탕으로 외력 추정, 이를 바탕으로 조이스틱 force command 생성
+
+- 중력 매트릭스, 서보 전류엔코더 정보를 바탕으로 외력 추정
+
+- 이를 바탕으로 조이스틱 force command 생성
+
+<br>
 
 open_manipulator/open_manipulator_teleop/src/try_s.cpp
-: 조이스틱의 3차원 정보를 받아서 manipulator position command 생성
 
+- 조이스틱의 3차원 정보를 받아서 manipulator position command 생성
+
+<br>
+
+Geomagic_Touch_ROS_Drivers/omni_common/src/omni_state.cpp
+
+- End Effector에 가해진 외력 추정값을 받아서 force를 생성.
+
+- 조이스틱의 3차원 정보를 manipulator에 전달
